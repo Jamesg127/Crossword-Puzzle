@@ -14,16 +14,14 @@ public class CrosswordPuzzleGenerator {
                         count++;
                         if(cw[i][j].equals(arr[k].substring(l, l + 1))){
                             String temp = arr[k].substring(l, l + 1);
-                            String temparrary1 = arr[k].substring(0, arr[k].indexOf(temp));
+                            String tempArrary = arr[k].substring(0, arr[k].indexOf(temp));
                             for(int p = 1; p < count; p++){
                                 if(cw[i - p][j] == null){
                                     cw[i - p][j] = arr[k].substring( count - p, count - p + 1);
                                 }
                             }
                             for(int p = 1; p < count; p++){
-                                if(cw[i + p][j] == null){
-                                    cw[i + p][j] = arr[k].substring(count + p);
-                                }
+
                             }
                             for(int p = 1; p < count; p++){
                                 if(cw[i][j - p] == null){
